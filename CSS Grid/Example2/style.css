@@ -4,7 +4,9 @@
     grid-gap: 5px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 40px 300px 40px;
-    grid-template-areas: "m h h h h h h h h h h ." "m c c c c c c c c c c c" "m f f f f f f f f f f .";
+    grid-template-areas: "h h h h h h h h h h h h" "m c2 c2 c2 c2 c2 c c c c c c" "f f f f f f f f f f f f";
+    justify-items: center;
+    align-items: center;
 }
 
 .header {
@@ -22,6 +24,10 @@
     /* grid-column: -2 / -1; */
     /* Using grid areas */
     grid-area: m;
+}
+
+.content+.content {
+    grid-area: c2;
 }
 
 .content {
